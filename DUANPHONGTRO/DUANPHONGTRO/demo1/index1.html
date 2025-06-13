@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/demo/script.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="/JQuery/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="Jquery1.js"></script>
+    <title>Phòng trọ OU</title>
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="grid">
+                <nav class="header-navbar">
+                    <ul class="header-navbar-list">
+                        <li class="header-navbar-item header-navbar-item--separate">
+                            <i class="header-navbar-item-icon fa-solid fa-house"></i>
+                            Trang chủ
+                        </li>
+                        <li class="header-navbar-item">
+                            <li id="address-form"><a class="header-navbar-item" href="#">TP.HỒ CHÍ MINH<i class="fas fa-sort-down header-navbar-item-btn"></i></a></li>  
+                           <div class="address">
+                            <div class="address-content">
+                                <h2>Địa điểm thuê trọ<span id="address-close">x Đóng</span></h2>
+                                <form action="">
+                                    <p>Chọn địa điểm cần tìm</p>
+                                    <select name="">
+                                        <option value="#">--Chọn địa điểm</option>
+                                        <option value="">TP HỒ CHÍ MINH</option>
+                                    </select>
+                                    <select name="" >
+                                        <option value="#">--Chọn quận huyện</option>
+                                        <option value="">Quận 1 (cơ sở 2 Mai Thị Lựu)</option>
+                                        <option value="">Quận 3 (cơ sở 1 Võ Văn Tần)</option>
+                                        <option value="">Quận Gò Vấp (cơ sở 3 Nguyễn Kiệm)</option>
+                                    </select>
+                                    <select name="">
+                                        <option value="#">--Chọn phường xã</option>
+                                        <option value="">phường 1</option>
+                                        <option value="">phường 2</option>
+                                        <option value="">phường 3</option>
+                                        <option value="">phường 4</option>
+                                        <option value="">phường 5</option>
+                                        <option value="">phường 6</option>
+                                        <option value="">phường 7</option>
+                                        <option value="">phường 8</option>
+                                        <option value="">phường 9</option>
+                                        <option value="">phường 10</option>
+                                    </select>
+                                    <input type="text" placeholder="Tên đường">
+                                    <button>Xác nhận</button>
+                                </form>
+                            </div>
+                        </div>
+                        </li>
+                    </ul>
+    
+                    <ul class="header-navbar-list">
+                        <li class="header-navbar-item header-navbar-item--has-notify">
+                            <a href="" class="header-navbar-item-link ">
+                                <i class="header-navbar-icon far fa-bell"></i>
+                                Thông báo
+                            </a>
+                    
+                            <!-- --------------notify -->
+                           <div class="header-notify ">
+                            <header class="header-notify-header ">
+                                <h3>Thông báo mới nhận</h3>
+                            </header>
+                            <ul class="header-notify-list">
+                                <li class="header-notify-item header-notify-item--viewed">
+                                    <a href="" class="header-notify-link">
+                                        <img src="/images/p9.jpg" alt="" class="header-notify-img">
+                                        <div class="header-notify-info">
+                                            <span class="header-notify-name">Phòng trọ mới khai trương giá cực rẻ</span>
+                                            <span class="header-notify-description">11 Lê Lai phường 3 Gò Vấp</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header-notify-item">
+                                    <a href="" class="header-notify-link">
+                                        <img src="/images/p7.jpg" alt="" class="header-notify-img">
+                                        <div class="header-notify-info">
+                                            <span class="header-notify-name">Phòng trọ mới khai trương giá cực rẻ</span>
+                                            <span class="header-notify-description">11 Lê Lai phường 3 Gò Vấp</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header-notify-item">
+                                    <a href="" class="header-notify-link">
+                                        <img src="/images/p10.jpg" alt="" class="header-notify-img">
+                                        <div class="header-notify-info">
+                                            <span class="header-notify-name">Phòng trọ 2 phòng ngủ mới xây</span>
+                                            <span class="header-notify-description">65B Võ Văn Tần Quận 3</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header-notify-item">
+                                    <a href="" class="header-notify-link">
+                                        <img src="/images/p4.jpg" alt="" class="header-notify-img">
+                                        <div class="header-notify-info">
+                                            <span class="header-notify-name">Phòng trọ 1 người ở bancol thoáng mát</span>
+                                            <span class="header-notify-description">09 Mai Thị Lựu Quận 1</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header-notify-item">
+                                    <a href="" class="header-notify-link">
+                                        <img src="/images/anh3.jpg" alt="" class="header-notify-img">
+                                        <div class="header-notify-info">
+                                            <span class="header-notify-name">Phòng trọ mới khai trương giảm giá đến 50%</span>
+                                            <span class="header-notify-description">109/25/3B Nguyễn Kiệm Gò Vấp</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <footer class="header-notify-footer">
+                                <a href="" class="header-notify-footer-btn">Xem tất cả</a>
+                            </footer>
+                           </div>
+                        </li>
+
+                        <li class="header-navbar-item">
+                            <a href="" class="header-navbar-item-link">
+                                <i class="far fa-question-circle"></i>
+                                Trợ giúp
+                            </a>
+                        </li>
+                        <!-- <li class="header-navbar-item header-navbar-item-strong header-navbar-item--separate">Đăng ký</li>
+                        <li class="header-navbar-item header-navbar-item-strong">Đăng nhập</li> -->
+                        <li class="header-navbar-item header-navbar-user">
+                            <img src="/images/user1.png" alt="" class="header-navbar-user-img">
+                            <span class="header-navbar-user-name">Hoài Ân</span>
+
+                            <ul class="header-navbar-user-menu">
+                                <li class="header-navbar-user-item">
+                                    <a href="">Tài khoản của tôi</a>
+                                </li>>
+                                <li class="header-navbar-user-item">
+                                    <a href="">Chuyển tài khoản</a>
+                                </li>>
+                                <li class="header-navbar-user-item header-navbar-user-item-separate">
+                                    <a href="">Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </nav>
+
+                <div class="header-with-search">
+                   <div class="header-logo">
+                    <a href="/" class="header-logo-link">
+                         <img class="header-logo-img" src="images/Logo-DH-Mo-TPHCM-OU.webp" alt="">
+                    </a>
+                    </div>
+
+                <div class="header-search">
+                    <div class="header-search-input-wrap">
+                        <input type="text" class="header-search-input" placeholder="Tìm kiếm...">
+                        <!-- --------------Search History-------------------------- -->
+                        <div class="header-search-history">
+                            <h3 class="header-search-history-heading">Lịch sử tìm kiếm</h3>
+                            <ul class="header-search-history-list">
+                                <li class="header-search-history-item">
+                                    <a href="">Phòng trọ gần Nguyễn Kiệm</a>
+                                </li>
+                                <li class="header-search-history-item">
+                                    <a href="">Phòng trọ gần cơ sở 3</a>
+                                </li>
+                                <li class="header-search-history-item">
+                                    <a href="">Phòng trọ gò vấp giá rẻ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="header-search-select">
+                        <span class="header-search-select-label">Khu vực</span>
+                        <i class="header-search-select-icon fas fa-angle-down"></i>
+
+                        <ul class="header-search-option">
+                            <li class="header-search-option-item header-search-option-item-active">
+                                <span>Nội ô</span>
+                                <i class="fas fa-check"></i>
+                            </li>
+                            <li class="header-search-option-item">
+                                <span>Ngoại ô</span>
+                                <i class="fas fa-check"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="header-search-btn">
+                        <i class="header-search-btn-icon fas fa-search"></i>
+                    </button>
+                </div>
+                <!-- ----------------------cart layout----------------- -->
+                <div class="header-cart">
+                    <div class="header-cart-wrap">
+                        <i class="header-cart-icon fas fa-heart"></i>
+                        <span class="header-cart-notice">3</span>
+
+                        <!-- No:cart: header-cart-list-no-cart -->
+                         <div class="header-cart-list"> <!--header-cart-list-no-cart"> -->
+                            <img src="/images/empty_cart.jpg" alt="" class="header-cart-no-cart-img">
+                            <span class="header-cart-list-no-cart-msg">
+                                Chưa có sản phẩm
+                            </span>
+
+                            <h4 class="header-cart-heading">Phòng trọ đã lưu</h4>
+                            <ul class="header-cart-list-item">
+                                <!---------------------- cart item--------------- -->
+                                <li class="header-cart-item">
+                                    <img src="/images/anh3.jpg" alt="" class="header-cart-img">
+                                    <div class="header-cart-item-info">
+                                        <div class="header-cart-item-head">
+                                            <h5 class="header-cart-item-name">Phòng trọ sinh viên 2 người giá rẻ</h5>
+                                            <div class="header-cart-item-price-wrap">
+                                                <span class="header-cart-item-price">1.960.000<sup>đ</sup></span>
+                                            </div>
+                                        </div>
+                                        <div class="header-cart-item-body">
+                                            <span class="header-cart-item-description">
+                                                Nội thất cơ bản,máy lạnh
+                                            </span>
+                                            <span class="header-cart-item-remove">Xóa</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="header-cart-item">
+                                    <img src="/images/p9.jpg" alt="" class="header-cart-img">
+                                    <div class="header-cart-item-info">
+                                        <div class="header-cart-item-head">
+                                            <h5 class="header-cart-item-name">Phòng trọ 2 người có bancol</h5>
+                                            <div class="header-cart-item-price-wrap">
+                                                <span class="header-cart-item-price">2.600.000<sup>đ</sup></span>
+                                            </div>
+                                        </div>
+                                        <div class="header-cart-item-body">
+                                            <span class="header-cart-item-description">
+                                                Nội thất cơ bản,máy lạnh
+                                            </span>
+                                            <span class="header-cart-item-remove">Xóa</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="header-cart-item">
+                                    <img src="/images/p8.jpg" alt="" class="header-cart-img">
+                                    <div class="header-cart-item-info">
+                                        <div class="header-cart-item-head">
+                                            <h5 class="header-cart-item-name">Phòng trọ 2 người mới xây</h5>
+                                            <div class="header-cart-item-price-wrap">
+                                                <span class="header-cart-item-price">1.400.000<sup>đ</sup></span>
+                                            </div>
+                                        </div>
+                                        <div class="header-cart-item-body">
+                                            <span class="header-cart-item-description">
+                                                Nội thất cơ bản,máy lạnh
+                                            </span>
+                                            <span class="header-cart-item-remove">Xóa</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <button class="header-cart-view-cart btn btn-primary">Đã lưu</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+        </header>
+    </div>
+
+        <!-- --------------------------content---------------- -->
+        <div class="app-container">
+            <div class="grid">
+                <div class="grid-row app-content">
+                    <div class="grid-column-2">
+                        <nav class="category">
+                            <div class="category-img">
+                                <img src="/images/adv2.jpg" alt="">
+                            </div>
+                            <div class="category-content">
+                                <ul>
+                                    <li>T</li>
+                                    <li>R</li>
+                                    <li>Ọ</li>
+                                </ul>
+                            </div>
+                            <div class="category-content1">
+                               <ul>
+                                <li>O</li>
+                                <li>U</li>
+                               </ul>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <div class="grid-column-10">
+                        <div class="home-filter">
+                            <span class="home-filter-label"><a href="http://127.0.0.1:5500/demo/index.html#">Trang chủ </a> <i class="fa-solid fa-chevron-right home-filter-btn"></i></span>
+                            <span class="home-filter-label"><a href="">Gò Vấp <i class="fa-solid fa-chevron-right home-filter-btn"></i></a></span>
+                            <span class="home-filter-label"><a href="">Phòng trọ sinh viên</a></span>
+                            <div>
+                            </div>
+                        </div>
+                    
+
+                         <div class="home-product">
+                            <div class="grid-row"> 
+                                <div class="grid-column-8"> 
+                                    <!-- -------------Product item------- -->
+                                        <section class="slider">
+                                                <div class="slider-content">
+                                                   <div class="slider-content-left">
+                                                    <div class="slider-content-left-top-container">
+                                                        <div class="slider-content-left-top1">
+                                                           <a href=""><img src="/images/p5.jpg" alt="ảnh ou"></a>
+                                                           <a href=""><img src="/images/p5a.jpg" alt="ảnh ou"></a>
+                                                           <a href=""><img src="/images/p5b.jpg" alt="ảnh ou"></a>
+                                                        </div>
+                                                        <div class="slider-content-left-top-btn1">
+                                                            <i class="fas fa-chevron-left prev"></i>
+                                                            <i class="fas fa-chevron-right next"></i>
+                                                        </div>
+                                                    </div> 
+                                                 </div>
+                                            </div>
+                                        </section> 
+                                            
+                                            
+                                                    <div class="home-product-item">
+                                                        <div class="home-product-item-title">
+                                                            <h1>CHO THUÊ PHÒNG TRỌ SINH VIÊN KHU VỰC TRUNG TÂM GẦN SIÊU THỊ, CHỢ LỚN, GẦN ĐẠI HỌC MỞ, ĐẠI HỌC CÔNG NGHIỆP,...</h1>
+                                                        </div>
+                                                        <div class="home-address">
+                                                            <p><i class="fa-solid fa-location-dot"></i>Địa chỉ: 11 Lê Lai, Phường 3, Gò Vấp</p>
+                                                        </div>
+                                        <div class="home-price">
+                                            <span><i class="fa-solid fa-tag"></i>3.3 triệu</span>
+                                            <span><i class="fa-brands fa-codepen"></i>25m<sup>2</sup></span>
+                                            <span><i class="fa-solid fa-hashtag"></i>633120</span>
+                                        </div>
+                                        <div class="home-product-describe">
+                                            <h3>Thông tin mô tả</h3>
+                                            <p>
+                                                -TIỆN ÍCH
+                                                <br>
+                                                +Không chung chủ, giờ giấc tự do
+                                                <br>
+                                                +Máy lạnh,tủ lạnh, giường, bếp
+                                                <br>
+                                                +Gần siêu thị, chợ lớn, công viên, nhà sách, trường học
+                                                <br>
+                                                +Khu vực an ninh, yên tĩnh
+                                                <br>
+                                                +Chủ trọ dễ tính
+                                                <br>
+                                                +Ưu tiên sinh viên năm nhất
+                                            </p>
+                                        </div>
+                                        <div class="home-product-information">
+                                            <h3 class="home-product-title">
+                                                Đặc điểm tin đăng
+                                            </h3>
+                                            <table class="home-product-table">
+                                                <tbody>
+                                                <tr>
+                                                    <td>Mã tin:</td>
+                                                    <td>#633120</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Khu vực:</td>
+                                                    <td>Hồ Chí Minh</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Đối tượng thuê:</td>
+                                                    <td>Tất cả</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ngày đăng:</td>
+                                                    <td>Thứ 3, 20:03 15/8/2023</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Loại tin:</td>
+                                                    <td>Phòng trọ, nhà trọ</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+
+                                        <div class="home-product-information">
+                                        <h3 class="home-product-title">
+                                            Thông tin liên hệ
+                                        </h3>
+                                        <table class="home-product-contact-table">
+                                            <tbody>
+                                            <tr>
+                                                <td>Liên hệ:</td>
+                                                <td>Huỳnh Vũ Anh Trang</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Điện thoại:</td>
+                                                <td>0353121053</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Zalo:</td>
+                                                <td>0353121053</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                        <div class="home-product-address">
+                                            <h3>Bản đồ</h3>
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.9036905332946!2d106.682987!3d10.818681999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528e412b3a137%3A0xd2d2f2ca83491584!2zMTEgTMOqIExhaSwgUGjGsOG7nW5nIDQsIEfDsiBW4bqlcCwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1692119070694!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="home-product">
+                                    <div class="grid-row">
+                                        <div class="grid-column-2">
+                                    <div class="adv-right">
+                                      <div class="adv-right-user">
+                                        <img src="/images/default-user.png" alt="">
+                                      </div>
+                                      <div class="adv-img-author-name">
+                                        Trang Lê
+                                      </div>
+                                      <div class="adv-right-status">
+                                        <p><i class="fa-solid fa-circle"></i> Đang hoạt động</p>
+                                      </div>
+                                      <div class="adv-right-num">
+                                        <button><i class="fa-solid fa-phone"></i> 0353121053</button>
+                                      </div>
+                                      <div class="adv-right-num">
+                                        <button>
+                                            <div class="adv-right-zalo-content">
+                                            <img src="/images/zalo.jpg" alt="">
+                                           <span>Nhắn Zalo</span>
+                                        </div>
+                                        </button>
+                                      </div>
+                                      <div class="adv-right-num">
+                                        <button><i class="fa-regular fa-heart adv-right-heart"></i>Yêu thích</button>
+                                      </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                            
+                        </div>
+                      
+                        <!-- adv------------------------------------------------------------------- -->
+        <div class="app-container">
+            <div class="grid">
+                <div class="home-product">
+                    <div class="grid-row">
+                        <div class="grid-column-8">
+                            <div class="product-adv">
+                                <ul class="product-adv-list">
+                                    <li class="product-adv-heading">
+                                        <h3>TIN NỔI BẬT</h3>
+                                    </li>
+                                     <li class="product-adv-wrap">
+                                        <div class="product-adv-img">
+                                            <img src="/images/p6.jpg" alt="">
+                                        </div>
+                                        <div class="product-adv-container">
+                                            <h3 class="product-adv-title">
+                                                <a href="http://127.0.0.1:5500/d%E1%BB%B1%20%C3%A1n%201/index1.html">CĂN HỘ STUDIO CỬA SỔ LỚN PHÚ NHUẬN GIÁ RẺ </a>
+                                            </h3>
+                                        <div class="product-adv-price">
+                                            <span><strong>4.3 triệu/tháng</strong></span>
+                                            <span>20m<sup>2</sup></span>
+                                            <span>Quận Phú Nhuận, Hồ Chí Minh</span>
+                                        </div>
+                                        <div class="product-adv-content">
+                                            <p>Căn hộ studio cửa sổ lớn Phú Nhuận giá rẻ! Địa chỉ: 32 Nguyễn Đình Chiểu Phú Nhuận full nội thất,  gần chợ siêu thị trường học... </p>
+                                        </div>
+                                        <div class="product-adv-author">
+                                            <img src="/images/default-user.png" alt="">
+                                            <span class="author-name">Quynh Huong</span>
+                                        </div>
+                                    </div>
+                                    </li>
+
+                                    <li class="product-adv-wrap">
+                                        <div class="product-adv-img">
+                                            <img src="/images/p7.jpg" alt="">
+                                        </div>
+                                        <div class="product-adv-container">
+                                            <h3 class="product-adv-title">
+                                                <a href="">DUPLEX 2 NGƯỜI Ở BÌNH THẠNH </a>
+                                            </h3>
+                                        <div class="product-adv-price">
+                                            <span><strong>2.8 triệu/tháng</strong></span>
+                                            <span>25m<sup>2</sup></span>
+                                            <span>Quận Bình Thạnh, Hồ Chí Minh</span>
+                                        </div>
+                                        <div class="product-adv-content">
+                                            <p> Duplex Bình Thạnh giá rẻ! Địa chỉ: 112 Bùi Đình Túy Bình Thạnh full nội thất,  gần chợ siêu thị trường học... </p>
+                                        </div>
+                                        <div class="product-adv-author">
+                                            <img src="/images/default-user.png" alt="">
+                                            <span class="author-name">Ngoc Nhi</span>
+                                        </div>
+                                    </div>
+                                    </li>
+
+                                    <li class="product-adv-wrap">
+                                        <div class="product-adv-img">
+                                            <img src="/images/p8.jpg" alt="">
+                                        </div>
+                                        <div class="product-adv-container">
+                                            <h3 class="product-adv-title">
+                                                <a href="">PHÒNG TRỌ SINH VIÊN KHÔNG GIỚI HẠN NGƯỜI Ở</a>
+                                            </h3>
+                                        <div class="product-adv-price">
+                                            <span><strong>5.5 triệu/tháng</strong></span>
+                                            <span>40m<sup>2</sup></span>
+                                            <span>Quận Gò Vấp, Hồ Chí Minh</span>
+                                        </div>
+                                        <div class="product-adv-content">
+                                            <p>Căn hộ studio cửa sổ lớn Gò Vấp giá rẻ! Địa chỉ: 115 Nguyễn Thái Sơn Gò Vấp full nội thất,  gần chợ siêu thị trường học... </p>
+                                        </div>
+                                        <div class="product-adv-author">
+                                            <img src="/images/default-user.png" alt="">
+                                            <span class="author-name">Nga chuppy</span>
+                                        </div>
+                                    </div>
+                                    </li>
+
+                                    <li class="product-adv-wrap">
+                                        <div class="product-adv-img">
+                                            <img src="/images/p9.jpg" alt="">
+                                        </div>
+                                        <div class="product-adv-container">
+                                            <h3 class="product-adv-title">
+                                                <a href="">PHÒNG TRỌ SINH VIÊN MỚI KHAI TRƯƠNG </a>
+                                            </h3>
+                                        <div class="product-adv-price">
+                                            <span><strong>3 triệu/tháng</strong></span>
+                                            <span>20m<sup>2</sup></span>
+                                            <span>Quận Phú Nhuận, Hồ Chí Minh</span>
+                                        </div>
+                                        <div class="product-adv-content">
+                                            <p>Phòng trọ mới xây Địa chỉ: 112 An Khê Phú Nhuận full nội thất, giờ giấc tự do không chung chủ </p>
+                                        </div>
+                                        <div class="product-adv-author">
+                                            <img src="/images/default-user.png" alt="">
+                                            <span class="author-name">Bảo Phúc</span>
+                                        </div>
+                                    </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+    <div class="grid">
+        <div class="home-product-end">
+            <div class="home-product-end-heading">
+                <h4>Tại sao lại chọn Phòng Trọ OU?</h4>
+            </div>
+            <div class="home-product-end-content">
+                <p>Chúng tôi biết bạn có rất nhiều lựa chọn, nhưng PhongtroOU.com tự hào là trang web đứng top google về các từ khóa:
+                    cho thuê phòng trọ, nhà trọ, thuê nhà nguyên căn, cho thuê căn hộ, tìm người ở ghép, cho thuê mặt bằng...
+                    Vì vậy tin của bạn đăng trên website sẽ tiếp cận được với nhiều khách hàng hơn, do đó giao dịch nhanh hơn, tiết kiệm chi phí hơn</p>
+            </div>
+            <div class="home-product-end-num">
+                <span>116.998+</span>
+                <span>103.348+</span>
+                <span>300.000+</span>
+                <span>2.500.000+</span>
+            </div>
+            <div class="home-product-end-num-name">
+                <span class="name-tv">Thành viên</span>
+                <span class="name-tin">Tin đăng</span>
+                <span class="name-ltc">Lượt truy cập/tháng</span>
+                <span class="name-view">Lượt xem/tháng</span>
+            </div>
+            <div class="home-product-end-info">
+                <p>"Trước khi biết website phongtroOU, mình phải tốn nhiều công sức và chi phí cho việc đăng tin cho thuê:
+             từ việc phát tờ rơi, dán giấy, và đăng lên các website khác nhưng hiệu quả không cao. 
+             Từ khi biết website phongtroOU.com, mình đã thử đăng tin lên và đánh giá hiệu quả khá cao trong khi chi phí khá thấp,
+              không còn tình trạng phòng trống kéo dài." </p>
+              <span>Phòng trọ OU (trang web tìm trọ uy tín cho sinh viên OU)</span>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<footer class="footer">
+    <div class="grid">
+        <div class="grid-row">
+            <div class="grid-column-2-4">
+                <h3 class="footer-heading">Chăm sóc khách hàng</h3>
+                <ul class="footer-list">
+                    <li class="footer-item">
+                        <a href="" class="footer-item-link">Trung tâm trợ giúp</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="" class="footer-item-link">Phòng trọ OU</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="" class="footer-item-link">Hướng dẫn thuê phòng</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="grid-column-2-4">
+                <h3 class="footer-heading">Giới thiệu</h3>
+                <ul class="footer-list">
+                    <li class="footer-item">
+                        <a href="" class="footer-item-link">Giới thiệu</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="" class="footer-item-link">Tuyển dụng</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="" class="footer-item-link">Điều khoản</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="grid-column-2-4">
+                <h3 class="footer-heading">Danh mục</h3>
+                <ul class="footer-list">
+                    <li class="footer-item">
+                        <a href="" class="footer-item-link">Phòng trọ sinh viên</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="" class="footer-item-link">Phòng trọ giá rẻ</a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="" class="footer-item-link">Phòng trọ uy tín</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="grid-column-2-4">
+                <h3 class="footer-heading">Theo dõi</h3>
+                <ul class="footer-list">
+                    <li class="footer-item">
+                        <a href="" class="footer-item-link">
+                            <i class="footer-item-icon fab fa-facebook"></i>
+                            Facebook
+                        </a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="" class="footer-item-link">
+                            <i class="footer-item-icon fab fa-instagram"></i>
+                            Instagram
+                        </a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="" class="footer-item-link">
+                            <i class="footer-item-icon fab fa-linkedin"></i>
+                            Linkedin
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+             <div class="grid-column-2-4">
+                <h3 class="footer-heading">LIÊN HỆ</h3>
+                <div class="footer-download">
+                     <img src="/images/zalo.jpg" alt="" class="footer-download-qr"> 
+                    <a href=""> 099 129 853</a>
+        </div>
+        <div class="footer-download">
+            <img src="/images/câll.jpg" alt="" class="footer-download-call"> 
+           <a href=""> 090 888 888</a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="grid">
+            <p class="footer-text">COPYRIGHT &copy; 2023</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

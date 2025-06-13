@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style2.css">
+  <title></title>
+</head>
+<body>
+  <h1>KHẢO SÁT NHANH PHÒNG TRỌ OU</h1>
+  <div class="survey-form-link">
+    <p><a href="http://127.0.0.1:5500/demo/index.html"><i class="fa-solid fa-house"></i>Trang chủ</a><i class="fa-solid fa-chevron-right"></i></p>
+    <p><a href="">Khảo sát</a></p>
+  </div>
+
+  <!-- -------------------------- -->
+  <div class="container">
+    <h2>Thông tin cá nhân</h2>
+    <form id="surveyForm">
+      <div class="form-group">
+        <label for="name">Họ và Tên:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="age">Tuổi:</label>
+        <input type="number" id="age" name="age" min="0" required>
+      </div>
+      <div class="form-group">
+        <label for="gender">Giới Tính:</label>
+        <select id="gender" name="gender" required>
+          <option value="male">Nam</option>
+          <option value="female">Nữ</option>
+          <option value="other">Khác</option>
+        </select>
+      </div>
+    </form>
+  </div>
+
+  <div class="container">
+    <div class="question">
+      <p>Câu hỏi 1: Phòng trọ OU là một trang web uy tín</p>
+      <label>
+        <input type="radio" name="question1" value="agree"> Đồng ý
+      </label>
+      <label>
+        <input type="radio" name="question1" value="disagree"> Không đồng ý
+      </label>
+    </div>
+    
+    <div class="question">
+      <p>Câu hỏi 2: Thông tin hình ảnh chính xác, rõ ràng, dễ đọc dễ tham khảo </p>
+      <label>
+        <input type="radio" name="question2" value="agree"> Đồng ý
+      </label>
+      <label>
+        <input type="radio" name="question2" value="disagree"> Không đồng ý
+      </label>
+    </div>
+
+    <div class="question">
+      <p>Câu hỏi 3: Giá cả phù hợp với sinh viên</p>
+      <label>
+        <input type="radio" name="question3" value="agree"> Đồng ý
+      </label>
+      <label>
+        <input type="radio" name="question3" value="disagree"> Không đồng ý
+      </label>
+    </div>
+
+    <div class="question">
+      <p>Câu hỏi 4: Đa dạng loại hình để lựa chọn</p>
+      <label>
+        <input type="radio" name="question4" value="agree"> Đồng ý
+      </label>
+      <label>
+        <input type="radio" name="question4" value="disagree"> Không đồng ý
+      </label>
+    </div>
+
+    <div class="question">
+      <p>Câu hỏi 5: Bạn sẽ giới thiệu trang web của chúng tôi cho những người khác chứ? </p>
+      <label>
+        <input type="radio" name="question5" value="agree"> Đồng ý
+      </label>
+      <label>
+        <input type="radio" name="question5" value="disagree"> Không đồng ý
+      </label>
+    </div>
+
+    <div class="question">
+      <p>Câu hỏi 6: Nếu gặp phải sự cố, bức xúc, không vui lòng với bất kỳ điều gì khi thuê trọ ở trang web PhongtroOU.com hãy phản hồi lại cho chúng tôi ngay nhé</p>
+      <label>
+        <input type="radio" name="question6" value="agree"> Đồng ý
+      </label>
+      <label>
+        <input type="radio" name="question6" value="disagree"> Không đồng ý
+      </label>
+    </div>
+    
+    <div class="question">
+      <label for="cmt">Ý kiến cá nhân:</label>
+      <input type="text" name="cmt" id="cmt">
+    </div>
+
+    <button id="submitBtn">Gửi</button>
+  </div>
+
+  <!-- ------------------------FOOTER-------------------- -->
+<footer class="footer">
+  <div class="footer-bottom">
+      <p class="footer-text">COPYRIGHT &copy; 2023</p>
+  </div>
+</footer>
+<!-- ... --------------------js----------------------... -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const submitBtn = document.getElementById("submitBtn");
+
+    submitBtn.addEventListener("click", function(event) {
+      event.preventDefault();
+
+      const form = document.getElementById("surveyForm");
+      const formData = new FormData(form);
+
+      for (const [key, value] of formData.entries()) {
+        console.log(`${key}: ${value}`);
+      }
+
+      const question1Choices = document.getElementsByName("question1");
+      const question2Choices = document.getElementsByName("question2");
+      const question3Choices = document.getElementsByName("question3");
+      const question4Choices = document.getElementsByName("question4");
+      const question5Choices = document.getElementsByName("question5");
+      const question6Choices = document.getElementsByName("question6");
+
+      const selectedChoice1 = getSelectedChoice(question1Choices);
+      const selectedChoice2 = getSelectedChoice(question2Choices);
+      const selectedChoice3 = getSelectedChoice(question3Choices);
+      const selectedChoice4 = getSelectedChoice(question4Choices);
+      const selectedChoice5 = getSelectedChoice(question5Choices);
+      const selectedChoice6 = getSelectedChoice(question6Choices);
+      const personalOpinion = document.getElementById("cmt").value;
+
+      if (selectedChoice1 && selectedChoice2 && selectedChoice3 && selectedChoice4 && selectedChoice5 && selectedChoice6) {
+        console.log(`Câu trả lời 1: ${selectedChoice1}`);
+        console.log(`Câu trả lời 2: ${selectedChoice2}`);
+        console.log(`Câu trả lời 3: ${selectedChoice3}`);
+        console.log(`Câu trả lời 4: ${selectedChoice4}`);
+        console.log(`Câu trả lời 5: ${selectedChoice5}`);
+        console.log(`Câu trả lời 6: ${selectedChoice6}`);
+        console.log(`Ý kiến: ${personalOpinion}`);
+      } else {
+        alert("Vui lòng chọn đủ câu trả lời cho tất cả các câu hỏi.");
+      }
+    });
+
+    function getSelectedChoice(choices) {
+      for (const choice of choices) {
+        if (choice.checked) {
+          return choice.value;
+        }
+      }
+      return null;
+    }
+  });
+</script>
+</body>
+</html>
+
